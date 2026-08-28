@@ -1,4 +1,5 @@
 import {
+  CheckIcon,
   ChevronRight as ChevronRightIcon,
   DeleteIcon,
   TrashIcon,
@@ -24,6 +25,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
             onClick={() => onTaskClick(task.id)}
             className={`bg-slate-400 w-full text-white p-2 rounded-md ${task.isCompleted && "line-through"}`}
           >
+            {task.isCompleted && <CheckIcon/>}
             {task.title}
           </button>
           <Button
